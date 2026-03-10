@@ -53,7 +53,7 @@ export default function HiddenStudiosV2() {
       </nav>
 
       {/* HERO */}
-      <section data-landright-section="Hero" style={{ position: "relative", zIndex: 10 }} className="pt-12 pb-32 md:pt-20 md:pb-48">
+      <section data-landright-section="hero" style={{ position: "relative", zIndex: 10 }} className="pt-12 pb-32 md:pt-20 md:pb-48">
         <div className="max-w-6xl mx-auto px-6 md:px-10 text-center">
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-3 mb-8">
@@ -90,29 +90,49 @@ export default function HiddenStudiosV2() {
             Hidden Studios engineers Fortnite Creative maps and in-game marketing campaigns that put your brand in front of millions of active players — where they already live.
           </p>
 
-          {/* CTA */}
-          <button
-            type="button"
-            onClick={() => setShowCalendly(true)}
-            data-landright-cta="call"
-            style={{
-              background: "linear-gradient(135deg, #D4001A 0%, #A8001A 100%)",
-              color: "#EEE8D5",
-              fontFamily: "var(--font-bebas)",
-              fontSize: "22px",
-              letterSpacing: "0.15em",
-              padding: "18px 56px",
-              border: "none",
-              cursor: "pointer",
-              position: "relative",
-              clipPath: "polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%)",
-              transition: "opacity 0.2s",
-            }}
-            onMouseEnter={e => (e.currentTarget.style.opacity = "0.85")}
-            onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
-          >
-            CALL
-          </button>
+          {/* CTA Group */}
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "16px" }}>
+            <button
+              type="button"
+              onClick={() => setShowCalendly(true)}
+              data-landright-cta="call"
+              style={{
+                background: "linear-gradient(135deg, #D4001A 0%, #A8001A 100%)",
+                color: "#EEE8D5",
+                fontFamily: "var(--font-bebas)",
+                fontSize: "22px",
+                letterSpacing: "0.15em",
+                padding: "18px 56px",
+                border: "none",
+                cursor: "pointer",
+                position: "relative",
+                clipPath: "polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%)",
+                transition: "opacity 0.2s",
+              }}
+              onMouseEnter={e => (e.currentTarget.style.opacity = "0.85")}
+              onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
+            >
+              SCHEDULE CALL
+            </button>
+            <a
+              href="mailto:hello@hiddenstudios.gg"
+              data-landright-cta="email-link"
+              style={{
+                color: "#C9A84C",
+                fontFamily: "var(--font-manrope)",
+                fontSize: "14px",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                fontWeight: 600,
+                textDecoration: "none",
+                transition: "color 0.2s",
+              }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#EEE8D5")}
+              onMouseLeave={e => (e.currentTarget.style.color = "#C9A84C")}
+            >
+              Or email us directly
+            </a>
+          </div>
 
           {/* Calendly modal */}
           {showCalendly && (
