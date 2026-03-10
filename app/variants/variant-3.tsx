@@ -260,7 +260,7 @@ export default function HiddenStudiosV3() {
       </nav>
 
       {/* HERO */}
-      <section data-landright-section="Hero" className="diagonal-hero grain-overlay relative pt-16 pb-40 md:pt-24 md:pb-52 overflow-hidden">
+      <section data-landright-section="hero" className="diagonal-hero grain-overlay relative pt-16 pb-40 md:pt-24 md:pb-52 overflow-hidden">
         {/* Background texture lines */}
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 60px, #F2EDE6 60px, #F2EDE6 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, #F2EDE6 60px, #F2EDE6 61px)"
@@ -287,13 +287,13 @@ export default function HiddenStudiosV3() {
                 <button
                   type="button"
                   onClick={() => setCalendlyOpen(true)}
-                  className="btn-primary px-10 py-4 text-2xl rounded-sm"
+                  className="btn-primary px-10 py-4 text-2xl rounded-sm font-bebas tracking-wider"
                 >
-                  CALL
+                  SCHEDULE CALL
                 </button>
                 <div className="flex items-center gap-3 pt-2">
                   <div className="w-8 h-px bg-[#6B6B7A]" />
-                  <span className="font-manrope text-[#6B6B7A] text-sm">No commitment required</span>
+                  <span className="font-manrope text-[#6B6B7A] text-sm">15 min strategy session</span>
                 </div>
               </div>
             </div>
@@ -491,80 +491,80 @@ export default function HiddenStudiosV3() {
       </section>
 
       {/* EMAIL CONTACT SECTION */}
-      <section data-landright-section="Contact" className="bg-[#F2EDE6] py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left */}
-            <div>
-              <div className="section-label mb-4">Get In Touch</div>
-              <h2 className="font-bebas text-[#0D0D0D] leading-none mb-6" style={{ fontSize: "clamp(48px, 6vw, 80px)" }}>
-                READY TO<br />
-                <span className="text-[#D4001A]">DOMINATE</span><br />
-                FORTNITE?
-              </h2>
-              <p className="font-manrope text-[#7A7060] text-base leading-relaxed mb-8 max-w-md">
-                Tell us about your brand and campaign goals. We'll get back to you within 24 hours with a custom strategy outline.
-              </p>
-              <div className="flex items-center gap-4">
-                <button
-                  type="button"
-                  onClick={() => setCalendlyOpen(true)}
-                  className="btn-primary px-8 py-3 text-xl rounded-sm"
-                >
-                  CALL
-                </button>
-                <span className="font-manrope text-[#7A7060] text-sm">or fill the form →</span>
-              </div>
-            </div>
-
-            {/* Right: Email form */}
-            <div className="bg-[#E8E2DA] border border-[#C8C0B4] rounded-lg p-8">
-              <h3 className="font-bebas text-[#0D0D0D] text-2xl tracking-wide mb-6">EMAIL US</h3>
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                <div>
-                  <label className="font-manrope text-[#7A7060] text-xs uppercase tracking-widest block mb-1.5">Name</label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Your name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="input-field w-full px-4 py-3 rounded-sm text-sm"
-                  />
-                </div>
-                <div>
-                  <label className="font-manrope text-[#7A7060] text-xs uppercase tracking-widest block mb-1.5">Email</label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="your@email.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="input-field w-full px-4 py-3 rounded-sm text-sm"
-                  />
-                </div>
-                <div>
-                  <label className="font-manrope text-[#7A7060] text-xs uppercase tracking-widest block mb-1.5">Message</label>
-                  <textarea
-                    required
-                    placeholder="Tell us about your brand and campaign goals..."
-                    rows={4}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="input-field w-full px-4 py-3 rounded-sm text-sm resize-none"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="btn-primary w-full py-3.5 text-xl rounded-sm mt-2"
-                >
-                  EMAIL US
-                </button>
-              </form>
-            </div>
-          </div>
+      <section data-landright-section="contact" className="bg-[#F2EDE6] py-20 md:py-32">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* Left */}
+      <div>
+        <div className="section-label mb-4">Get In Touch</div>
+        <h2 className="font-bebas text-[#0D0D0D] leading-none mb-6" style={{ fontSize: "clamp(48px, 6vw, 80px)" }}>
+          READY TO<br />
+          <span className="text-[#D4001A]">DOMINATE</span><br />
+          FORTNITE?
+        </h2>
+        <p className="font-manrope text-[#7A7060] text-base leading-relaxed mb-8 max-w-md">
+          Tell us about your brand and campaign goals. We'll get back to you within 24 hours with a custom strategy outline.
+        </p>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <button
+            type="button"
+            onClick={() => setCalendlyOpen(true)}
+            className="btn-primary px-8 py-3 text-xl rounded-sm font-bebas tracking-wider"
+          >
+            BOOK A CALL
+          </button>
+          <span className="font-manrope text-[#7A7060] text-sm">or complete the form →</span>
         </div>
-      </section>
+      </div>
+
+      {/* Right: Email form */}
+      <div className="bg-[#E8E2DA] border border-[#C8C0B4] rounded-lg p-8">
+        <h3 className="font-bebas text-[#0D0D0D] text-2xl tracking-wide mb-6">EMAIL US</h3>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <div>
+            <label className="font-manrope text-[#7A7060] text-xs uppercase tracking-widest block mb-1.5">Name</label>
+            <input
+              type="text"
+              required
+              placeholder="Your name"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              className="input-field w-full px-4 py-3 rounded-sm text-sm"
+            />
+          </div>
+          <div>
+            <label className="font-manrope text-[#7A7060] text-xs uppercase tracking-widest block mb-1.5">Email</label>
+            <input
+              type="email"
+              required
+              placeholder="your@email.com"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              className="input-field w-full px-4 py-3 rounded-sm text-sm"
+            />
+          </div>
+          <div>
+            <label className="font-manrope text-[#7A7060] text-xs uppercase tracking-widest block mb-1.5">Message</label>
+            <textarea
+              required
+              placeholder="Tell us about your brand and campaign goals..."
+              rows={4}
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              className="input-field w-full px-4 py-3 rounded-sm text-sm resize-none"
+            />
+          </div>
+          <button
+            type="submit"
+            className="btn-primary w-full py-3.5 text-xl rounded-sm mt-2 font-bebas tracking-wider"
+          >
+            EMAIL US
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* FOOTER */}
       <footer data-landright-section="Footer" className="bg-[#0D0D0D] pt-16 pb-8">
